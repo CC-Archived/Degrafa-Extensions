@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<componentPackage>
+    
+    <!-- Styling -->
+    <component id="Style" class="com.codecatalyst.extensions.degrafa.Style"/>
+	<component id="StyleableGraphicBorderSkin" class="com.codecatalyst.extensions.degrafa.StyleableGraphicBorderSkin"/>
+		
+</componentPackage>
