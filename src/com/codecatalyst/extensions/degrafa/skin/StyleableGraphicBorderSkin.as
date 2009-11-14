@@ -92,17 +92,22 @@ package com.codecatalyst.extensions.degrafa.skin
 		{
 			super.styleChanged( styleProp );
 			
+			var allStyles:Boolean = ( ( styleProp == null ) || ( styleProp == "styleName" ) );
+			
 			for each ( var style:Style in styles )
 			{
-				var value:* = getStyle( style.name );
-				
-				if ( ( value == null ) && ( style.defaultValue != null ) )
+				if ( ( allStyles == true ) || ( style.name == styleProp ) )
 				{
-					style.value = style.defaultValue;
-				}
-				else
-				{
-					style.value = value;
+					var value:* = getStyle( style.name );
+					
+					if ( ( value == null ) && ( style.defaultValue != null ) )
+					{
+						style.value = style.defaultValue;
+					}
+					else
+					{
+						style.value = value;
+					}
 				}
 			}
 		}
