@@ -28,6 +28,7 @@ package com.codecatalyst.extensions.degrafa.component
 	import mx.core.IInvalidating;
 	import mx.core.IProgrammaticSkin;
 	import mx.core.UIComponent;
+	import mx.styles.ISimpleStyleClient;
 
 	/**
 	 *  Name of the class to use as the skin for this symbol.
@@ -118,6 +119,11 @@ package com.codecatalyst.extensions.degrafa.component
 				else if ( _skin is IProgrammaticSkin && initialized )
 				{
 					(_skin as IProgrammaticSkin).validateDisplayList();
+				}
+				
+				if ( _skin is ISimpleStyleClient )
+				{
+					(_skin as ISimpleStyleClient).styleName = this;
 				}
 			}						
 		}
