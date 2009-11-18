@@ -75,7 +75,7 @@ package com.codecatalyst.extensions.degrafa.component
 
 			var allStyles:Boolean = ( ( styleProp == null ) || ( styleProp == "styleName" ) );
 
-			if ( ( allStyles == true ) || ( styleProp = "skin" ) )
+			if ( ( allStyles == true ) || ( styleProp == "skin" ) )
 			{
 				loadSkin( getStyle( "skin" ) as Class );
 			}
